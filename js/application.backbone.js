@@ -81,7 +81,8 @@
 
 var AppRouter = Backbone.Router.extend({
     routes: {
-        "completed": "showCompleted"
+        "" :"showAll"
+        ,"completed": "showCompleted"
         ,"important":"showImportant"
     }
     ,initialize : function(op){
@@ -92,6 +93,9 @@ var AppRouter = Backbone.Router.extend({
     }
     ,showImportant : function(){
         this.view.showImportant()
+    }
+    ,showAll : function(){
+        this.view.showAll();
     }
 });
 
