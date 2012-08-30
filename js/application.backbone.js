@@ -118,6 +118,12 @@
 
 }(jQuery));
 
+/**
+ * Different routers for showing different views in the page
+ * Yet to be impletemented completely.
+ * But the method names describes them very well, i guess.
+ */
+
 var AppRouter = Backbone.Router.extend({
     routes: {
         "" :"showAll"
@@ -137,6 +143,13 @@ var AppRouter = Backbone.Router.extend({
         this.view.showAll();
     }
 });
+
+
+/**
+ * The final code : 
+ * Initialise all the views and router when the DOM is ready.
+ * TODO :  the routers are functional now , add the curresponding buttons to use them.
+ */
 
 jQuery(function(){
     window.myTodoApp = new AppView;
