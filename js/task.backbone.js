@@ -70,9 +70,10 @@
          * something like "EditTaskView" ,  which should get called 
          * when the start editing the task details
          */
-        ,editTask : function(){
+        ,editTask : function( e ){
             this.$el.find(".text.open").hide();
-            this.$el.find(".text-edit").show();
+            this.$el.find(".text-edit").show().focus();
+            e.preventDefault();
         }
         /*
          * Basic keyboard support 
@@ -90,9 +91,10 @@
          */
         ,updateTask: function(){
             var newdesc = this.$el.find(".text-edit").val();
-            if( newdesc ){
+            if( $.trim( newdesc ) !== "" ){
                 this.model.save({ text: newdesc });
             }
+            this.render();
         }
 
         ,deleteTask : function(e){
