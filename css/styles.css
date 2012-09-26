@@ -79,6 +79,11 @@ body {
     background: linear-gradient(top, #e5e5e5 0%,#ffffff 100%); /* W3C */
     
 }
+#bottomControls {
+    margin-top: 20px;
+    overflow: hidden;
+    text-align: center;
+}
 #controls #taskText ,.text-edit {
     border: 1px solid #B4B4B4;
     -webkit-box-shadow: 0 0 2px #FFFFFF inset;
@@ -105,7 +110,7 @@ body {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) inset;
     outline: medium none;
 }
-#controls #addTask {
+#controls #addTask ,.task-button {
     text-shadow: 0 -1px 0 rgba(0,0,0,0.7);
     color:#FFF;
     text-transform:uppercase;
@@ -123,6 +128,15 @@ body {
     height: 32px;
     cursor: pointer;
     font-weight: bold;
+}
+.task-button {
+    min-width: 100px;
+    display: inline-block;
+    line-height: 30px;
+    background: none;
+    text-decoration: none;
+    color: #ccc;
+    text-shadow: 0 0 5px #000;
 }
 .text-edit {
     display: none;

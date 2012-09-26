@@ -71,9 +71,9 @@
          * when the start editing the task details
          */
         ,editTask : function( e ){
+            e.preventDefault();
             this.$el.find(".text.open").hide();
             this.$el.find(".text-edit").show().focus();
-            e.preventDefault();
         }
         /*
          * Basic keyboard support 
