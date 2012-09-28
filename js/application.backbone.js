@@ -76,11 +76,15 @@
         }
         ,showCompleted : function(){
             this.clearView();
-            _.each(Tasks.completed(), this.addSingleTask ,this )
+            _.each(Tasks.completed(), this.addSingleTask ,this );
         }
         ,showImportant : function(){
             this.clearView();
-            _.each(Tasks.important(), this.addSingleTask ,this )   
+            _.each(Tasks.important(), this.addSingleTask ,this ); 
+        }
+        ,showPending : function(){
+            this.clearView();
+            _.each(Tasks.pending(), this.addSingleTask ,this );
         }
         /**
          * Adds a single View - by calling the TaskView 
@@ -129,6 +133,7 @@ var AppRouter = Backbone.Router.extend({
         "" :"showAll"
         ,"completed": "showCompleted"
         ,"important":"showImportant"
+        ,"pending" : "showPending"
     }
     ,initialize : function(op){
         this.view = op.view;
@@ -138,6 +143,9 @@ var AppRouter = Backbone.Router.extend({
     }
     ,showImportant : function(){
         this.view.showImportant()
+    }
+    ,showPending : function(){
+        this.view.showPending();
     }
     ,showAll : function(){
         this.view.showAll();
