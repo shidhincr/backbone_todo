@@ -1,7 +1,7 @@
 backbone_todo
 =============
 
-A simple TODO manager application using BackboneJs. A kickstarter project for start learning `BackboneJs`.
+A simple TODO manager application using BackboneJs. A kickstarter project for learning `BackboneJs`.
 
 
 Screenshot:
